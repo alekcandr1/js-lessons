@@ -8,6 +8,54 @@
 <body>
 
  <script>
+    const word0 = "Wassup";
+    const word0translation = "Здарова";
+
+    const word1 = "Bye";
+    const word1translation = "Покеда";
+
+    const word2 = "Programmer";
+    const word2translation = "Программист";
+
+    let wordsCount = 3;
+
+    const finishMessage1 = "Молодец, но надо стараться лучше";
+    const finishMessage2 = "Молодец, всё супер";
+
+    let userAnswerTrueCount = 0;
+    const minPercent = 50;
+
+
+    //--------------------
+
+ 
+const userAnswer0 = prompt(word0); // 0
+alert(userAnswer0 === word0translation);
+if (userAnswer0 === word0translation) {
+    userAnswerTrueCount++;
+}
+
+const userAnswer1 = prompt(word1); // 1
+alert(userAnswer1 === word1translation); 
+if (userAnswer1 === word1translation) {
+    userAnswerTrueCount++;
+}
+
+
+const userAnswer2 = prompt(word2); // 2
+alert(userAnswer2 === word2translation); 
+if (userAnswer2 === word2translation) {
+    userAnswerTrueCount++;
+}
+
+const correctUserAnswerPercent = userAnswerTrueCount / wordsCount * 100;
+if (correctUserAnswerPercent > minPercent) {
+    alert(finishMessage2); 
+
+} else {
+    alert(finishMessage1); 
+
+}
 
 
  </script>
