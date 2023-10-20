@@ -66,7 +66,7 @@
       
       
       **/
-        let balance = 100;
+        let balance = 1000;
         const productPriceString = window.prompt('How much');
         const productPrice = window.Number(productPriceString);
 
@@ -79,16 +79,23 @@
         } else {
             if (productPrice <= balance) {
                 document.write('Product purchased');
+                document.write('<br>', 'Charged: ' + productPrice);
+
+                balance -= productPrice;
+                document.write('<br>', 'Current balance: ' + balance);
+
             } else {
                 document.write('Not enough money');
             }
+
         }
 
 
 
+
+
+
         document.write('<br>', 'END');
-
-
 
     </script>
 </body>
