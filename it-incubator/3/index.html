@@ -1,85 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
- <script>
-  /**  const word0 = "Wassup";
-    const word0translation = "Здарова";
+    <script>
+        /**  const word0 = "Wassup";
+          const word0translation = "Здарова";
+      
+          const word1 = "Bye";
+          const word1translation = "Покеда";
+      
+          const word2 = "Programmer";
+          const word2translation = "Программист";
+      
+          let wordsCount = 3;
+      
+          const finishMessage1 = "Молодец, но надо стараться лучше";
+          const finishMessage2 = "Молодец, всё супер";
+      
+          let userAnswerTrueCount = 0;
+          const minPercent = 50;
+      
+      
+          //--------------------
+      
+       
+      const userAnswer0 = prompt(word0); // 0
+      alert(userAnswer0 === word0translation);
+      if (userAnswer0 === word0translation) {
+          userAnswerTrueCount++;
+      }
+      
+      const userAnswer1 = prompt(word1); // 1
+      alert(userAnswer1 === word1translation); 
+      if (userAnswer1 === word1translation) {
+          userAnswerTrueCount++;
+      }
+      
+      
+      const userAnswer2 = prompt(word2); // 2
+      alert(userAnswer2 === word2translation); 
+      if (userAnswer2 === word2translation) {
+          userAnswerTrueCount++;
+      }
+      
+      const correctUserAnswerPercent = userAnswerTrueCount / wordsCount * 100;
+      if (correctUserAnswerPercent > minPercent) {
+          alert(finishMessage2); 
+      
+      } else {
+          alert(finishMessage1); 
+      
+      }
+      
+      
+      const message = window.prompt("Alert");
+      document.write(message);
+      console.log("console log");
+      
+      
+      **/
+        let balance = 100;
+        const productPriceString = window.prompt('How much');
+        const productPrice = window.Number(productPriceString);
 
-    const word1 = "Bye";
-    const word1translation = "Покеда";
-
-    const word2 = "Programmer";
-    const word2translation = "Программист";
-
-    let wordsCount = 3;
-
-    const finishMessage1 = "Молодец, но надо стараться лучше";
-    const finishMessage2 = "Молодец, всё супер";
-
-    let userAnswerTrueCount = 0;
-    const minPercent = 50;
-
-
-    //--------------------
-
- 
-const userAnswer0 = prompt(word0); // 0
-alert(userAnswer0 === word0translation);
-if (userAnswer0 === word0translation) {
-    userAnswerTrueCount++;
-}
-
-const userAnswer1 = prompt(word1); // 1
-alert(userAnswer1 === word1translation); 
-if (userAnswer1 === word1translation) {
-    userAnswerTrueCount++;
-}
-
-
-const userAnswer2 = prompt(word2); // 2
-alert(userAnswer2 === word2translation); 
-if (userAnswer2 === word2translation) {
-    userAnswerTrueCount++;
-}
-
-const correctUserAnswerPercent = userAnswerTrueCount / wordsCount * 100;
-if (correctUserAnswerPercent > minPercent) {
-    alert(finishMessage2); 
-
-} else {
-    alert(finishMessage1); 
-
-}
-
-
-const message = window.prompt("Alert");
-document.write(message);
-console.log("console log");
-
-
-**/
-let balance = 100;
-const productPriceString = window.prompt('How much');
-const productPrice = window.Number(productPriceString); 
-
-document.write('Start', '<br>');
-
-if (productPrice <= balance) {
-    document.write('Product purchased');
-} else {
-    document.write('Not enough money');
-} 
-
-document.write('<br>', 'END');
+        document.write('Start', '<br>');
 
 
+        if (isNaN(productPrice)) {
+            document.write('You input incorrect number');
 
- </script>
+        } else {
+            if (productPrice <= balance) {
+                document.write('Product purchased');
+            } else {
+                document.write('Not enough money');
+            }
+        }
+
+
+
+        document.write('<br>', 'END');
+
+
+
+    </script>
 </body>
+
 </html>
