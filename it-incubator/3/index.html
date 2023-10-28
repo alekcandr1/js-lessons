@@ -13,147 +13,153 @@
 
 
 
-          const word0 = {
+        const word0 = {
             question: 'Wassup',
             answer: 'Здарова'
-          }
-          const word1 = {
+        }
+        const word1 = {
             question: 'Bye',
             answer: 'Покеда'
-          }
-          const word2 = {
+        }
+        const word2 = {
             question: 'Programmer',
             answer: 'Программист'
-          }
-      
-          let wordsCount = 3;
-      
-          const finishMessage1 = "Молодец, но надо стараться лучше";
-          const finishMessage2 = "Молодец, всё супер";
-      
-          let userAnswerTrueCount = 0;
-          const minPercent = 50;
-      
-      
-          //--------------------
-      
-       
-      const userAnswer0 = prompt(word0.question); // 0
-      alert(userAnswer0 === word0.answer);
-      if (userAnswer0 === word0.answer) {
-          userAnswerTrueCount++;
-      }
-      const userAnswer1 = prompt(word1.question); // 0
-      alert(userAnswer1 === word1.answer);
-      if (userAnswer1 === word1.answer) {
-          userAnswerTrueCount++;
-      }
-      const userAnswer2 = prompt(word2.question); // 0
-      alert(userAnswer2 === word2.answer);
-      if (userAnswer2 === word2.answer) {
-          userAnswerTrueCount++;
-      }
-      
-      
-      const correctUserAnswerPercent = userAnswerTrueCount / wordsCount * 100;
-      if (correctUserAnswerPercent > minPercent) {
-          alert(finishMessage2); 
-      
-      } else {
-          alert(finishMessage1); 
-      
-      }
-      
-           
-     /**
-      const message = window.prompt("Alert");
-      document.write(message);
-      console.log("console log");
-    **/    
-     
-     /**
-        let balance = 1000;
-        const productPriceString = window.prompt('How much');
-        const productPrice = window.Number(productPriceString);
+        }
 
-        document.write('Start', '<br>');
+        let wordsCount = 3;
+
+        const resultMessages = {
+            finishSuccess: 'Молодец, но надо стараться лучше',
+            finishUnsuccess: 'Молодец, всё супер'
+        }
+
+        const settings = {
+            minPercent: 50,
+        }
+        const result = {
+            userAnswerTrueCount: 0
+        }
 
 
-        if (isNaN(productPrice)) {
-            document.write('You input incorrect number');
+        //--------------------
+
+
+        const userAnswer0 = prompt(word0.question); // 0
+        alert(userAnswer0 === word0.answer);
+        if (userAnswer0 === word0.answer) {
+            result.userAnswerTrueCount++;
+        }
+        const userAnswer1 = prompt(word1.question); // 0
+        alert(userAnswer1 === word1.answer);
+        if (userAnswer1 === word1.answer) {
+            result.userAnswerTrueCount++;
+        }
+        const userAnswer2 = prompt(word2.question); // 0
+        alert(userAnswer2 === word2.answer);
+        if (userAnswer2 === word2.answer) {
+            result.userAnswerTrueCount++;
+        }
+
+
+        const correctUserAnswerPercent = result.userAnswerTrueCount / wordsCount * 100;
+        if (correctUserAnswerPercent > settings.minPercent) {
+            alert(resultMessages.finishUnsuccess);
 
         } else {
-            if (productPrice <= balance) {
-                document.write('Product purchased');
-                document.write('<br>', 'Charged: ' + productPrice);
-
-                balance -= productPrice;
-                document.write('<br>', 'Current balance: ' + balance);
-
-            } else {
-                document.write('Not enough money');
-            }
+            alert(resultMessages.finishSuccess);
 
         }
-           document.write('<br>', 'END');
-    **/
+
+
+        /**
+         const message = window.prompt("Alert");
+         document.write(message);
+         console.log("console log");
+       **/
+
+        /**
+           let balance = 1000;
+           const productPriceString = window.prompt('How much');
+           const productPrice = window.Number(productPriceString);
+   
+           document.write('Start', '<br>');
+   
+   
+           if (isNaN(productPrice)) {
+               document.write('You input incorrect number');
+   
+           } else {
+               if (productPrice <= balance) {
+                   document.write('Product purchased');
+                   document.write('<br>', 'Charged: ' + productPrice);
+   
+                   balance -= productPrice;
+                   document.write('<br>', 'Current balance: ' + balance);
+   
+               } else {
+                   document.write('Not enough money');
+               }
+   
+           }
+              document.write('<br>', 'END');
+       **/
 
 
 
 
 
-/**
-const laptop1 = {
-    name: 'zenbook',
-    manufacturer: 'ASUS',
-    price: 1000,
-}
-
-const laptop2 = {
-    name: 'macbook',
-    manufacturer: {
-        title: 'APPLE',
-        counterBrand: 'USA',
-        numberFactor: '57A',
-        factoryAddress: 'China, Jouhuely 14'
-    },
-    price: 3000,
-
-}
-
-let room = {
-    wall1: {
-        hasWindow: true,
-        color: 'white',
-        conditioner: {
+        /**
+        const laptop1 = {
+            name: 'zenbook',
             manufacturer: 'ASUS',
-            power: 220,
-        },
-    }
-    wall2: {
-        hasWindow: false;
-        color: 'white',
-        conditioner: null,
-
-
-    }
-    wall3: {
-        hasWindow: false;
-        color: 'white',
-        conditioner: null,
-
-
-    }
-    wall4: {
-        hasWindow: false;
-        color: 'white',
-        conditioner: null,
-
-
-    }
-}
-     
-**/
+            price: 1000,
+        }
+        
+        const laptop2 = {
+            name: 'macbook',
+            manufacturer: {
+                title: 'APPLE',
+                counterBrand: 'USA',
+                numberFactor: '57A',
+                factoryAddress: 'China, Jouhuely 14'
+            },
+            price: 3000,
+        
+        }
+        
+        let room = {
+            wall1: {
+                hasWindow: true,
+                color: 'white',
+                conditioner: {
+                    manufacturer: 'ASUS',
+                    power: 220,
+                },
+            }
+            wall2: {
+                hasWindow: false;
+                color: 'white',
+                conditioner: null,
+        
+        
+            }
+            wall3: {
+                hasWindow: false;
+                color: 'white',
+                conditioner: null,
+        
+        
+            }
+            wall4: {
+                hasWindow: false;
+                color: 'white',
+                conditioner: null,
+        
+        
+            }
+        }
+             
+        **/
 
     </script>
 </body>
