@@ -10,14 +10,21 @@
 <body>
 
     <script>
-        /**  const word0 = "Wassup";
-          const word0translation = "Здарова";
-      
-          const word1 = "Bye";
-          const word1translation = "Покеда";
-      
-          const word2 = "Programmer";
-          const word2translation = "Программист";
+
+
+
+          const word0 = {
+            question: 'Wassup',
+            answer: 'Здарова'
+          }
+          const word1 = {
+            question: 'Bye',
+            answer: 'Покеда'
+          }
+          const word2 = {
+            question: 'Programmer',
+            answer: 'Программист'
+          }
       
           let wordsCount = 3;
       
@@ -31,24 +38,22 @@
           //--------------------
       
        
-      const userAnswer0 = prompt(word0); // 0
-      alert(userAnswer0 === word0translation);
-      if (userAnswer0 === word0translation) {
+      const userAnswer0 = prompt(word0.question); // 0
+      alert(userAnswer0 === word0.answer);
+      if (userAnswer0 === word0.answer) {
+          userAnswerTrueCount++;
+      }
+      const userAnswer1 = prompt(word1.question); // 0
+      alert(userAnswer1 === word1.answer);
+      if (userAnswer1 === word1.answer) {
+          userAnswerTrueCount++;
+      }
+      const userAnswer2 = prompt(word2.question); // 0
+      alert(userAnswer2 === word2.answer);
+      if (userAnswer2 === word2.answer) {
           userAnswerTrueCount++;
       }
       
-      const userAnswer1 = prompt(word1); // 1
-      alert(userAnswer1 === word1translation); 
-      if (userAnswer1 === word1translation) {
-          userAnswerTrueCount++;
-      }
-      
-      
-      const userAnswer2 = prompt(word2); // 2
-      alert(userAnswer2 === word2translation); 
-      if (userAnswer2 === word2translation) {
-          userAnswerTrueCount++;
-      }
       
       const correctUserAnswerPercent = userAnswerTrueCount / wordsCount * 100;
       if (correctUserAnswerPercent > minPercent) {
@@ -59,13 +64,13 @@
       
       }
       
-      
+           
+     /**
       const message = window.prompt("Alert");
       document.write(message);
       console.log("console log");
-      
-      
-      **/
+    **/    
+     
      /**
         let balance = 1000;
         const productPriceString = window.prompt('How much');
@@ -93,15 +98,62 @@
            document.write('<br>', 'END');
     **/
 
-    let myConsole = {
-        name: 'Alex',
-        age: '29',
+
+
+
+
+/**
+const laptop1 = {
+    name: 'zenbook',
+    manufacturer: 'ASUS',
+    price: 1000,
+}
+
+const laptop2 = {
+    name: 'macbook',
+    manufacturer: {
+        title: 'APPLE',
+        counterBrand: 'USA',
+        numberFactor: '57A',
+        factoryAddress: 'China, Jouhuely 14'
+    },
+    price: 3000,
+
+}
+
+let room = {
+    wall1: {
+        hasWindow: true,
+        color: 'white',
+        conditioner: {
+            manufacturer: 'ASUS',
+            power: 220,
+        },
     }
+    wall2: {
+        hasWindow: false;
+        color: 'white',
+        conditioner: null,
 
-myConsole.log();
+
+    }
+    wall3: {
+        hasWindow: false;
+        color: 'white',
+        conditioner: null,
 
 
+    }
+    wall4: {
+        hasWindow: false;
+        color: 'white',
+        conditioner: null,
+
+
+    }
+}
      
+**/
 
     </script>
 </body>
