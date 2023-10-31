@@ -10,20 +10,46 @@
 <body>
 
     <script>
-        // Shop list
-        let shopList = [
-            ["Молока", "Хлеб", "Яйца"],
-            ["Мороженное", "Сок"]
-        ]
-
-        for (i = 0; i < shopList.length; i++) {
-            for (x = 0; x < shopList[i].length; x++) [
-                document.write(shopList[i][x], "<br>")
-            ]
-        }
 
 
 
+
+        /**
+                // Shop list
+                let shopList = [
+                    ["Молока", "Хлеб", "Яйца"],
+                    ["Мороженное", "Сок"]
+                ]
+        
+                for (i = 0; i < shopList.length; i++) {
+                    for (x = 0; x < shopList[i].length; x++) {
+                        document.write(shopList[i][x], "<br>")
+        
+                    }
+                }
+        
+        
+                document.write("<br>Список 2<br>")
+                // Shop list
+                let shopListTwo = [
+                    ["Молока", "Хлеб", "Яйца"],
+                    ["Мороженное", "Сок"]
+                ]
+        
+                for (i = 0; i < shopListTwo.length; i++) {
+                    let subArray = shopListTwo[i];
+                    document.write("-------------<br>");
+        
+                    for (x = 0; x < subArray.length; x++) {
+                        document.write(x + 1, " - ", subArray[x], "<br>")
+        
+                    }
+        
+                    
+                }
+        
+        
+        **/
 
 
 
@@ -48,65 +74,54 @@
                 }
         **/
 
+        const words = [
+            {
+                question: 'Wassup',
+                answer: 'Здарова'
+            },
+            {
+                question: 'Bye',
+                answer: 'Покеда'
+            },
+            {
+                question: 'Programmer',
+                answer: 'Программист'
+            }
 
-        /**
-               const word0 = {
-                   question: 'Wassup',
-                   answer: 'Здарова'
-               }
-               const word1 = {
-                   question: 'Bye',
-                   answer: 'Покеда'
-               }
-               const word2 = {
-                   question: 'Programmer',
-                   answer: 'Программист'
-               }
-       
-               let wordsCount = 3;
-       
-               const resultMessages = {
-                   finishSuccess: 'Молодец, но надо стараться лучше',
-                   finishUnsuccess: 'Молодец, всё супер'
-               }
-       
-               const settings = {
-                   minPercent: 50,
-               }
-               const result = {
-                   userAnswerTrueCount: 0
-               }
-       
-       
-               //--------------------
-       
-       
-               const userAnswer0 = prompt(word0.question); // 0
-               alert(userAnswer0 === word0.answer);
-               if (userAnswer0 === word0.answer) {
-                   result.userAnswerTrueCount++;
-               }
-               const userAnswer1 = prompt(word1.question); // 0
-               alert(userAnswer1 === word1.answer);
-               if (userAnswer1 === word1.answer) {
-                   result.userAnswerTrueCount++;
-               }
-               const userAnswer2 = prompt(word2.question); // 0
-               alert(userAnswer2 === word2.answer);
-               if (userAnswer2 === word2.answer) {
-                   result.userAnswerTrueCount++;
-               }
-       
-       
-               const correctUserAnswerPercent = result.userAnswerTrueCount / wordsCount * 100;
-               if (correctUserAnswerPercent > settings.minPercent) {
-                   alert(resultMessages.finishUnsuccess);
-       
-               } else {
-                   alert(resultMessages.finishSuccess);
-       
-               }
-               **/
+        ]
+
+        let wordsCount = 3;
+
+        const resultMessages = {
+            finishSuccess: 'Молодец, но надо стараться лучше',
+            finishUnsuccess: 'Молодец, всё супер'
+        }
+
+        const settings = {
+            minPercent: 50,
+        }
+        const result = {
+            userAnswerTrueCount: 0
+        }
+
+        for (let i = 0; i < words.length; i++) {
+            const userAnswer = prompt(words[i].question);
+            alert(userAnswer === words[i].answer);
+            if (userAnswer === words[i].answer) {
+                result.userAnswerTrueCount++;
+            }
+        }
+        //--------------------
+
+        const correctUserAnswerPercent = result.userAnswerTrueCount / wordsCount * 100;
+        if (correctUserAnswerPercent > settings.minPercent) {
+            alert(resultMessages.finishUnsuccess);
+
+        } else {
+            alert(resultMessages.finishSuccess);
+
+        }
+
 
         /**
          const message = window.prompt("Alert");
