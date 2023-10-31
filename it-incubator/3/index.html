@@ -66,14 +66,28 @@
         // document.write(grades[2], '<br>');
         // document.write(grades[3], '<br>');
 
-        /**
-                let repeatCount = 4;
-                for (let index = 0; index < repeatCount; index++) {
-                    document.write('A');
         
-                }
-        **/
+        let persons = [
+            {
+                name: "Alex",
+                surname: "Bohon",
+                birthYear: 1994,
+            },
+            {
+                name: "Anna",
+                surname: "Bohon",
+                birthYear: 1994,
+            },
+        ];
 
+        for (i = 0; i < persons.length; i++) {
+            
+            document.write('<br>Name ', i + 1, "<br>", persons[i].name);
+        }
+
+
+
+/**
         const words = [
             {
                 question: 'Wassup',
@@ -121,7 +135,7 @@
             alert(resultMessages.finishSuccess);
 
         }
-
+**/
 
         /**
          const message = window.prompt("Alert");
